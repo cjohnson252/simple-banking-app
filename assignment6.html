@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="all" href="assignment6.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<script type="text/javascript" src="assignment6.js"></script>
+	<title>Assignment 6</title>
+</head>
+<body>
+	<form id="form">
+		<label>Payment:</label>
+		<input id="cc" type="radio" name="payment" value="1">Credit Card
+		<input id="wt" type="radio" name="payment" value="2">Wire Transfer
+		<input type="submit" value="Buy!" onclick="buy(); return false;">
+		<p id="creditCard">
+			<label>Card Number:</label>
+			<input id="a" type="text" name="cardNum" size="16">
+			<label>Expiration:</label>
+			<input id="b" type="text" name="date1" size="2">/
+			<input id="c" type="text" name="date2" size="2">
+			<label>3-Digit Security Number:</label>
+			<input id="d" type="text" name="date1" size="3">
+		</p>
+		<p id="wireTransfer">Transfer the amount reg. $957.00 to account 0009286322</p>
+	</form>
+	
+	<p>
+		<label>Add Accounts: </label>
+		<input id="newAccount" type="text">
+		<input type="submit" value="Add" onclick="addAccount();">
+	</p>
+	
+	<p>Your Accounts</p>
+	<ul id="sortable">
+		<li>Savings</li>
+		<li>Checking</li>
+		<li>Retirement</li>
+	</ul>
+	<div id="trash">
+		<img src="trash.jpg" alt="trash"/>
+	</div>
+	
+	<br>
+	<button id="showInfo">Click for More Information</button>
+	<button id="hideInfo">Hide</button>
+	
+	<p id="info">
+		<button id="savings">Savings</button>
+		<button id="checking">Checking</button>
+		<button id="retirement">Retirement</button>
+	</p>
+	
+	<div id="txt"></div>
+</body>
+</html>
